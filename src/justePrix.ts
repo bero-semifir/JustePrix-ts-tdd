@@ -12,5 +12,9 @@ export const genererJustePrix = (prixMax: number): number => {
 export const comparer = (nombreUtilisateur: number, justePrix: number) => {
     if (nombreUtilisateur < justePrix) return 'C\'est plus';
     if (nombreUtilisateur > justePrix) return 'C\'est moins';
-    return 'C\'est gagné !'
-}
+    return 'C\'est gagné !';
+};
+
+export const peutJouer = (nombreVie: number) => {
+    return nombreVie > 0
+};
