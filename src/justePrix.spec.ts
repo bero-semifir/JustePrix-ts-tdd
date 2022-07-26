@@ -1,4 +1,4 @@
-import { comparer } from './justePrix';
+import { comparer, peutJouer } from './justePrix';
 
 describe('JustePrix', () => {
     describe('Comparer', () => {
@@ -19,4 +19,15 @@ describe('JustePrix', () => {
         })
 
     });
+
+    describe('peutJouer', () => { 
+        test('doit retourner vrais si le nombre de vie est supérieur à 0', () => { 
+            expect(peutJouer(1)).toBe(true);
+            expect(peutJouer(7)).toBe(true);
+            expect(peutJouer(70)).toBe(true);
+         })
+        test('doit retourner faux si le nombre de vie est à 0', () => { 
+            expect(peutJouer(0)).toBe(false);
+         })
+     })
 });
